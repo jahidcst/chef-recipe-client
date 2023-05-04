@@ -13,11 +13,14 @@ import Main from './components/Main/Main.jsx';
 import Home from './components/Home/Home.jsx';
 import RecipeLayout from './components/RecipeLayout/RecipeLayout';
 import Recipe from './components/Chef/Recipe';
+import AuthProviders from './providers/AuthProviders';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     
     children: [
       {
@@ -54,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthProviders>
    <RouterProvider router={router} />
+   </AuthProviders>
   </React.StrictMode>,
 )

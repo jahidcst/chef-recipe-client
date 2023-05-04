@@ -1,27 +1,58 @@
 import React from 'react';
 import { Form, Link } from 'react-router-dom';
-import Register from '../Register/Register';
+
 
 const Login = () => {
+
+    const handleLogin = event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+    }
     return (
-        <div className=' border-black pl-10 mx-72 my-3 border-2 bg-slate-200 '>
-            <h3 className='text-center'>Please Login</h3>
-            <Form >
-                <div className='bg-slate-200'>
-                    <label  htmlFor="email">Email</label><br />
-                    <input className='w-96 mb-2 text-start pl-3 border-solid border-black h-8 m-auto border-2 rounded-sm' type="email" name="email" id="email" placeholder='Enter Your Email' required />
+            <div className="hero min-h-screen bg-base-200 text-center">
+
+                <div className="hero-content flex-col ">
+
+                    <div className="card flex-shrink-0 w-full max-w-lg shadow-2xl bg-base-100">
+                        <h3 className='text-center text-2xl font-bold mt-5'>Please Login!</h3>
+                        <Form onSubmit={handleLogin}>
+                        <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="text" name='email' placeholder=" Your Email" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Password</span>
+                                </label>
+                                <input type="text" name='password' placeholder="Your Password" className="input input-bordered" required />
+                                <label className="label">
+                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                </label>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn btn-primary">Login</button>
+                            </div>
+                            <h2 className='text-xl'>Or</h2>
+                        </div>
+                        <div className='' >
+                            <button className="btn btn-outline btn-primary mb-3">Sign in with Google</button><br />
+                            <button className="btn btn-outline btn-secondary">Sign in with Github</button>
+                        </div>
+                        </Form>
+                        <Link to='/register'>Don't have an account?<button className='btn btn-active btn-link'>Register</button>
+                        </Link>
+                    </div>
                 </div>
-                <label  htmlFor="password">Password</label><br />
-                <input className='w-96  text-start pl-3 border-solid border-black h-8 border-2 rounded-sm' type="password" name="password" id="password" placeholder='Enter Your Password' required />
-                <br />
-                <div className='mt-6 text-center' >
-                    <button className='bg-gray-400 border-black border-2 p-1 rounded-md w-52 text-orange-700 text-xl font-semibold mb-3'>Google Sign-in</button>
-                    <br />
-                    <button className='bg-slate-400  border-black border-2 p-1 rounded-md w-52 text-black text-xl font-semibold'>Github Sign-in</button>
-                </div>
-                <h4 className='text-center'>Don't have an account? <Link>Please<Register>Register</Register></Link></h4>
-            </Form>
-        </div>
+            </div>
+
+        
+
     );
 };
 

@@ -45,8 +45,11 @@ const Login = () => {
                             <button className="btn btn-outline btn-secondary">Sign in with Github</button>
                         </div>
                         </Form>
-                        <Link to='/register'>Don't have an account?<button className='btn btn-active btn-link'>Register</button>
+                        <div>
+                        Don't have an account?<Link to='/register' className='btn btn-link '>Register
                         </Link>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

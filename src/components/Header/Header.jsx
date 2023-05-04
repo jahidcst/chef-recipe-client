@@ -14,6 +14,9 @@ const Header = () => {
                     <Link to='/blog' className='hover:text-orange-600 '>Blog</Link>
                     <Link to='/login ' className='hover:text-orange-600 '>Login</Link>
                     <Link to='/register' className='hover:text-orange-600 '>Register</Link>
+                    <div className="avater w-10 rounded">
+                    <img src="/src/assets/29761817_7618876.jpg" />
+                </div>
                 </div>
             </div>
             

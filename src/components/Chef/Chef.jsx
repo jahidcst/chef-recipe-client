@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { FaBrain } from 'react-icons/fa';
+import { FaBrain, FaHamburger, FaThumbsUp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Chef = () => {
     const [chefsData, setChefsData] = useState([]);
@@ -11,8 +12,8 @@ const Chef = () => {
     }, []);
 
     return (
-        <div>
-            <h3>Meet Our Chef!</h3>
+        <div className='bg-slate-300 '>
+            <h3 className='text-center text-4xl font-bold pt-12 pb-8 text-purple-900'>Meet Our Chef!</h3>
             <div className='md:grid gird-cols-3 container mx-auto p-2 md:p-0 grid-cols-3 w-100  w-100 gap-4 '>
                 {
                     chefsData.map(chef => (
@@ -24,10 +25,10 @@ const Chef = () => {
                                 <div className="card-body">
                                     <h2 className="card-title text-2xl font-bold text-orange-600">{chef.name}</h2>
                                     <p className='font-normal flex items-center gap-2'><FaBrain></FaBrain> Experience: {chef.years_of_experience}</p>
-                                    <p className='font-normal flex items-center gap-2'>Recipes: {chef.num_recipes}</p>
-                                    <p className='font-normal flex items-center gap-2'>Likes: {chef.likes}</p>
+                                    <p className='font-normal flex items-center gap-2'><FaHamburger></FaHamburger> Recipes: {chef.num_recipes}</p>
+                                    <p className='font-normal flex items-center gap-2'><FaThumbsUp></FaThumbsUp> Likes: {chef.likes}</p>
                                     <div className="card-actions justify-end ">
-                                        <button className="btn btn-outline">Veiw Details</button>
+                                        <Link className="btn btn-outline" to={`/recipe/${chef.id}`}>Veiw Details</Link>
                                     </div>
                                 </div>
                             </div>

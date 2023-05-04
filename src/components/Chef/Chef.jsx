@@ -12,7 +12,7 @@ const Chef = () => {
     }, []);
 
     return (
-        <div className='bg-slate-300 '>
+        <div className='bg-slate-300 pb-5 '>
             <h3 className='text-center text-4xl font-bold pt-12 pb-8 text-purple-900'>Meet Our Chef!</h3>
             <div className='md:grid gird-cols-3 container mx-auto p-2 md:p-0 grid-cols-3 w-100  w-100 gap-4 '>
                 {

@@ -6,7 +6,7 @@ import Chef from '../SingleChef/Chef';
 const ChefData = () => {
     const[chefall,setChef] = useState([])
     useEffect(() =>{
-        fetch('http://localhost:5000/chef')
+        fetch('https://chef-recipe-server-jahidcst.vercel.app/chef')
         .then(res => res.json())
         .then(data => setChef(data))
         .catch(error => console.log(error))

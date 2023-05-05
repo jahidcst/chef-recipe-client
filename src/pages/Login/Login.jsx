@@ -69,8 +69,8 @@ const Login = () => {
     <p>Don't have an account? <Link to='/register' className='text-red-400 underline'>Register</Link> </p>
   </form>
        <div className='ml-[100px]'>
-       <button className='flex items-center bg-green-500 p-3 m-3 text-xl mb-3' onClick={handleGoggle}> <FaGoogle></FaGoogle><span className='ml-2'>Goggle SignIn</span> </button>
-       <button className='flex items-center bg-green-500 p-3 m-4 text-xl mb-3' onClick={handleGithub }><FaGithub></FaGithub><span className='ml-2'>Github Login</span></button>
+       <button className='flex items-center btn btn-outline  p-5 mt-4' onClick={handleGoggle}><FaGoogle></FaGoogle><span className='ml-2'>Sign in with Google</span> </button>
+       <button className='flex items-center btn btn-outline  p-5 mt-4' onClick={handleGithub }><FaGithub></FaGithub><span className='ml-2'>Sign in with Github</span></button>
        </div>
         </div>
     );

@@ -21,7 +21,7 @@ const Header = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -44,7 +44,8 @@ const Header = () => {
               <li><Link to='blog'>Blog</Link></li>
             </ul>
           </div>
-          <div>
+          <div className=" justify-center items-center gap-4 pl-3 flex">
+            <img className="rounded-full w-20 " src="https://img.freepik.com/free-vector/detailed-chef-logo-template_23-2148987940.jpg?w=740&t=st=1683297703~exp=1683298303~hmac=d5a0c6e255381fb44ade9cc92aa47216380121dc38c9bc2dd468773efddc2158" alt="" />
             <a className=" normal-case"><span className='text-4xl font-semibold '>COOK</span><span className='text-4xl font-bold text-orange-600'>BOOKS</span></a>
           </div>
         </div>

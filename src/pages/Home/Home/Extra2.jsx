@@ -3,8 +3,8 @@ import React from 'react';
 const Extra2 = () => {
     return (
         <div>
-            <h2 className='text-center pt-5 font-bold text-3xl text-cyan-800 pb-3'>About Healthy Food!</h2>
-            <div className="card m-5 pt-10 bg-base-200 shadow-xl">
+            <h2 className='text-center mt-5 pt-5 font-bold text-3xl text-cyan-800 pb-3'>About Healthy Food!</h2>
+            <div className="card m-2 pt-10 bg-base-200 shadow-xl">
                 <figure>
                     <img src="https://img.freepik.com/free-vector/food-critic-abstract-concept-illustration-analyze-food-restaurant-chef-write-review-rating-expert-opinion-culinary-show-undercover-guest-travel-guide_335657-3512.jpg?w=740&t=st=1683284210~exp=1683284810~hmac=85fec975bedf9e3f5740f8093203dcf5a2bf233c3ce405fb6a89bb83529bfa44" alt="Shoes" className="rounded-xl w-[400px] h-[350]" />
                 </figure>

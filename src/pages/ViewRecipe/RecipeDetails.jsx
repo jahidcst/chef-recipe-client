@@ -3,7 +3,8 @@ import React from 'react';
 const RecipeDetails = ({ recipe }) => {
   const { name, cooking_method, rating, ingredients, _pic } = recipe
   const notify = (e) => {
-    alert('Added to Favourite')
+    alert(
+      'Added to Favourite')
     e.target.disabled = true
   }
   return (
